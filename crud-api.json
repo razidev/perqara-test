@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "aea6dccb-df4b-4fa9-a701-f11309ab568b",
+		"name": "Test Jenius",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2656749"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"razi1@mail.com\",\r\n    \"password\": \"tester123\",\r\n    \"username\": \"Razi\",\r\n    \"identity_number\": \"1234567890\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"razi1@mail.com\",\r\n    \"password\": \"tester126\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{lcl_token}}",
+						"uuid": "53c3fa5d-e864-4f4b-b33f-87808285c4c5"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MzI2YTZkYzJlYzI0MGMxZjZjOWI4ZSIsImVtYWlsIjoicmF6aUBtYWlsLmNvbSIsInVzZXJuYW1lIjoiUmF6aSIsImlkZW50aXR5X251bWJlciI6IjEyMzQ1Njc4OTAiLCJpYXQiOjE3MTQ2NTI4MzYsImV4cCI6MTcxNDY1NjQzNn0.0ljpIpLNG-kPsNOXzBMMZ9FRoUMdPysmqV74AROJ3C8",
+						"uuid": "8bded3cf-08a2-4e30-bddf-bc756eff3b7b"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/user/remove",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"remove"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-user",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{lcl_token}}",
+						"uuid": "fd8806b0-5c9d-4b47-95f7-7a7f40763ac4"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"tester126\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/update-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"update-password"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
