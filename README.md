@@ -5,7 +5,7 @@
 ### Manuel Installation
 1. Clone the repo
    ```sh
-    git clone https://github.com/razidev/razi-betest.git
+    git clone https://github.com/razidev/perqara-test.git
    ```
 2. Install the packages
    ```sh
